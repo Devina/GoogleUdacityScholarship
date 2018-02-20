@@ -1,0 +1,56 @@
+body {
+  font-family: Georgia, "Times New Roman", Serif;
+  background-color: #134428;
+}
+
+.card {
+  width: 325px;
+  height: auto;
+  box-shadow: 10px 10px 40px -4px rgba(0,0,0,0.75);
+  border: thin solid #000;
+  border-radius: 10px;
+  background: linear-gradient(black, orange);
+  margin: auto;
+  padding: 0.5px 0;
+}
+
+.heading-title {
+  padding-left: 1em;
+  color: #fff;
+  margin: 12.5px 0 1px 0;
+  border: none;
+}
+
+img {
+  width: 300px;
+  height: auto;
+  border: thin solid #d6d4d4;
+  border-radius: 10px;
+  margin: 12.5px;
+}
+
+.content {
+  border: thin solid #d6d4d4;
+  padding: 0 1em 0 1em;
+  margin: 0 12.5px 12.5px 12.5px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.important-fact {
+  font-style: italic;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list {
+  font-weight: bold;
+}
+
+.scientific-content {
+  font-style: italic;
+}
