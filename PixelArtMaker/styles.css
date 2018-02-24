@@ -1,0 +1,89 @@
+body {
+  text-align: center;
+  background-color: #74777c;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 60px;
+  margin: 0.2em;
+  padding: 20px 0 30px 0;
+  color: #fff;
+  text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+}
+
+.help-btn {
+  font-family: "Orbitron", sans-serif;
+  width: 15em;
+  background-color: #fff;
+}
+
+.instructions {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  display: inline-block;
+  border: 1px solid #000;
+  text-align: left;
+  margin: auto;
+  width: 94%;
+  padding: 0 10px 0 10px;
+}
+
+.content {
+  padding: 20px, 100px, 100px, 60px;
+  background-color: #cfd2d6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  width: 95%;
+}
+
+form {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-family: "Orbitron", sans-serif;
+  margin: 1em 0 0.25em;
+  padding: 10px 0 10px 0;
+}
+
+h2:first-of-type {
+  margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+  border: 1px solid #000;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+tr {
+  height: 20px;
+}
+
+td {
+  width: 20px;
+}
+
+input[type="number"] {
+  width: 6em;
+  background-color: #fff;
+}
+
+input[type="submit"] {
+  font-family: "Orbitron", sans-serif;
+  width: 15em;
+  background-color: #fff;
+}
+
+button {
+  font-family: "Orbitron", sans-serif;
+  background-color: #fff;
+  width: 15em;
+}

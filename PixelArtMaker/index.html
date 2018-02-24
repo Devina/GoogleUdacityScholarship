@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pixel Art Maker</title>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&effect=shadow-multiple|outline" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="design.js"></script>
+</head>
+
+<body>
+  <h1>Lab: Pixel Art Maker</h1>
+
+  <a id="displayText" href="javascript:toggle();"><button type="button" class="help-btn">Expand Help</button></a>
+  <div id="toggleText" style="display: none">
+    <span class="instructions">
+      <p>
+        This 'Pixel Art Maker' lets you draw on a canvas size that you define.
+      </p>
+      <p>
+        Select the size of the canvas grid that you want to draw on by choosing the height and width values <em>(<strong>Note:</strong> Canvas max size is 50x50)</em> and then clicking submit. This will create the canvas under the 'Design Canvas' section. Select the colour of choice from the 'Pick a Colour' section and draw by clicking on the canvas grid (either individual cell or multiple at a time, by holding the mouse button).
+      </p>
+      <p>
+        If you accidently colour a cell with the wrong colour, double click that cell to erase it.
+      </p>
+      <p>
+        There is an options to add/remove a height/width to the canvas, after the initial canvas is created. Click the appropriate button in the 'Canvas Options' section to add/remove the height/width to the chosen side.
+      </p>
+      <p>
+        If you want to clear the grid but retain the size of the grid, click the 'Clear Canvas' option.
+      </p>
+      <p>
+        There is also an option to 'Toggle Grid Lines' which will remove/restore the grid lines. If you remove it, then you will not be able to add/remove height/width until you restore the grid lines. However, you can still colour the canvas without grid lines.
+      </p>
+    </span>
+  </div>
+  <div class="content">
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+      Grid Height:
+      <input type="number" id="input_height" name="height" min="1" max="50" value="1"><br>
+      Grid Width:
+      <input type="number" id="input_width" name="width" min="1" max="50" value="1"><br><br>
+      <input type="submit">
+    </form>
+
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker">
+
+    <h2>Design Canvas</h2>
+    <table id="pixel_canvas"></table>
+
+    <h2>Canvas Options</h2>
+    <button id="addRowTop">Add Height - Top</button>
+    <button id="addRowBottom">Add Height - Bottom</button>
+    <button id="addColumnLeft">Add Width - Left</button>
+    <button id="addColumnRight">Add Width - Right</button>
+    <br>
+	  <button id="removeRowTop">Remove Height - Top</button>
+    <button id="removeRowBottom">Remove Height - Bottom</button>
+    <button id="removeColumnLeft">Remove Width - Left</button>
+    <button id="removeColumnRight">Remove Width - Right</button>
+    <br>
+    <button id="clearGrid">Clear Canvas</button>
+    <button id="toggleGridLines">Toggle Grid Lines</button>
+    <br><br>
+  </div>
+
+  <script language="javascript">
+    function toggle() {
+      let ele = document.getElementById("toggleText");
+      let text = document.getElementById("displayText");
+      if (ele.style.display == "block") {
+        ele.style.display = "none";
+        text.innerHTML = "<button type=\"button\" class=\"helpBtn\">Expand Help</button>";
+      }
+      else {
+        ele.style.display = "block";
+        text.innerHTML = "<button type=\"button\" class=\"helpBtn\">Hide Help</button>";
+      }
+    }
+  </script>
+</body>
+
+</html>
