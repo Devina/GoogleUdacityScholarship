@@ -1,0 +1,290 @@
+/*-------------------------------------
+    General
+--------------------------------------*/
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  margin: auto;
+  padding: auto;
+  font-family: "Open Sans", sans-serif;
+  color: #414042;
+  background-color: #2d3c49;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  color: #2d3c49;
+}
+
+header, main, footer {
+  width: 100%;
+  padding: 0 10px;
+}
+
+header, main {
+  background-color: #fff;
+}
+
+footer {
+  background-color: #02b3e4;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+footer p {
+  margin: 0;
+  padding-top: 10px;
+}
+
+a {
+  color: #02b3e4;
+  font-weight: bold;
+}
+
+/*-------------------------------------
+    Header
+--------------------------------------*/
+
+header {
+  padding-top: 10px;
+  padding-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.header__headings {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__headings h1 {
+  font-size: 1.8em;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.header__headings h3 {
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.header__logo {
+  width: 100%;
+  padding: 0 20px;
+}
+
+hr {
+  border: 1px solid #7d97ad;
+  width: 100%;
+}
+
+/*-------------------------------------
+    Main
+--------------------------------------*/
+
+.main__image {
+  width: 100%;
+  position: relative;
+  background-image: url("../img/Placeholder.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+/*-------------------------------------
+    Portfolio
+--------------------------------------*/
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio__item h2 {
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
+.portfolio__item {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.portfolio__item img {
+  border: 0 hidden #fff;
+  border-radius: 8px;
+}
+
+.portfolio__item img:hover {
+  opacity: 0.9;
+  -webkit-transition: all 1s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+/*-------------------------------------
+    Footer
+--------------------------------------*/
+
+footer p {
+  text-align: right;
+}
+
+/*-------------------------------------
+    Media queries
+--------------------------------------*/
+
+@media screen and (min-width: 0) {
+  .header__logo {
+    height: 48px;
+    padding: 0 40px;
+  }
+
+  .main__image {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .portfolio__heading {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .portfolio__item_name {
+    visibility: hidden;
+    font-size: 0;
+  }
+
+  .footer__hashtag {
+    visibility: hidden;
+    font-size: 0;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .header__logo {
+    height: 48px;
+    padding: 0 40px;
+  }
+
+  .main__image {
+    visibility: visible;
+    height: 300px;
+  }
+
+  .portfolio__heading {
+    font-size: 1.5em;
+    text-align: left;
+  }
+
+  .portfolio__item_name {
+    visibility: visible;
+    font-size: 1.5em;
+  }
+
+  .footer__hashtag {
+    visibility: visible;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .header__logo {
+    padding: 0 60px;
+  }
+
+  .header__headings h1 {
+    font-size: 2.2em;
+  }
+
+  .header__headings h3 {
+    font-size: 1.0em;
+  }
+
+  .portfolio__item {
+    width: 49%;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .header__logo {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .header__logo {
+    width: 10%;
+    height: 100px;
+    padding: 0;
+  }
+
+  .header__headings {
+    width: 90%;
+  }
+
+  .header__headings h1 {
+    font-size: 2.4em;
+    line-height: 1em;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: right;
+  }
+
+  .header__headings h3 {
+    width: 100%;
+    font-size: 1.2em;
+    line-height: 1em;
+    padding-top: 10px;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header__logo {
+    width: 10%;
+    height: 120px;
+  }
+
+  .header__headings {
+    width: 90%;
+  }
+
+  .header__headings h1 {
+    font-size: 3em;
+  }
+
+  .header__headings h3 {
+    font-size: 1.4em;
+  }
+
+  .portfolio__item {
+    width: 32.5%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  header, main, footer {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
