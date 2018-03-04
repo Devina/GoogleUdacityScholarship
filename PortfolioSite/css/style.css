@@ -159,25 +159,27 @@ footer p {
     padding: 0 40px;
   }
 
-  .main__image {
+  /* TODO: Additional customisation to make images responsive - srcset usage*/
+  /* Visibility hidden commented out to show all content.*/
+  /*.main__image {
     visibility: hidden;
     height: 0;
-  }
+  }*/
 
   .portfolio__heading {
     font-size: 1em;
     text-align: center;
   }
 
-  .portfolio__item_name {
+  /*.portfolio__item_name {
     visibility: hidden;
     font-size: 0;
-  }
+  }*/
 
-  .footer__hashtag {
+  /*.footer__hashtag {
     visibility: hidden;
     font-size: 0;
-  }
+  }*/
 }
 
 @media screen and (min-width: 320px) {
@@ -186,25 +188,25 @@ footer p {
     padding: 0 40px;
   }
 
-  .main__image {
+  /*.main__image {
     visibility: visible;
     height: 300px;
-  }
+  }*/
 
   .portfolio__heading {
     font-size: 1.5em;
     text-align: left;
   }
 
-  .portfolio__item_name {
+  /*.portfolio__item_name {
     visibility: visible;
     font-size: 1.5em;
-  }
+  }*/
 
-  .footer__hashtag {
+  /*.footer__hashtag {
     visibility: visible;
     font-size: 16px;
-  }
+  }*/
 }
 
 @media screen and (min-width: 400px) {
