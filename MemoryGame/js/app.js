@@ -14,7 +14,7 @@ let movesCount = 0;
 let currentTimer;
 let second = 0;
 let firstClick = false;
-const threeStars = 10, twoStars = 20, oneStar = 30;
+const threeStars = 15, twoStars = 25;
 
 /*-------------------------------------
     Functions
@@ -59,10 +59,8 @@ function gamePlay() {
 
 //Function - Start timer
 function startTimer() {
-  currentTimer = setInterval(function () {
-    timer.text(`${second}`)
-    second += 1
-  }, 1000);
+    timer.text(`${second}`);
+    second += 1;
 }
 
 //Function - Stop timer
@@ -75,15 +73,12 @@ function stopTimer(timer) {
 //Function - Star rating
 function starRating(movesCount) {
   let rating = 3;
-  if (movesCount > threeStars && movesCount < twoStars) {
+  if (movesCount > threeStars && movesCount <= twoStars) {
     reduceStar(2);
     rating = 2;
-  } else if (movesCount > twoStars && movesCount < oneStar) {
+  } else if (movesCount > twoStars) {
     reduceStar(1);
     rating = 1;
-  } else if (movesCount > oneStar) {
-    reduceStar(0);
-    rating = 0;
   }
   return { score: rating };
 };
@@ -122,17 +117,18 @@ function cardListener() {
   //Click Event - Flip card
   deck.find('.card').bind('click', function () {
 
-    //Start timer on first click
-    if(firstClick === false) {
-      firstClick = true;
-      startTimer();
-    }
-
     //Current flipped card
     let currentCard = $(this);
     let card = currentCard.context.innerHTML;
     currentCard.addClass('open show');
     openedCards.push(card);
+
+    //Start timer on first click
+    if(firstClick === false && openedCards.length === 1) {
+      startTimer();
+      currentTimer = setInterval(startTimer, 1000);
+      firstClick = true;
+    }
 
     //Compare with opened card
     if (openedCards.length === 2) {
@@ -181,6 +177,8 @@ restart.bind('click', function () {
     buttons: true
   }).then(function (isConfirm) {
     if (isConfirm) {
+      stopTimer(currentTimer);
+      openedCards = [];
       firstClick = false;
       gamePlay();
     }
