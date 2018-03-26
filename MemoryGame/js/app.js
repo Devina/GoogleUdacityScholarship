@@ -19,7 +19,6 @@ const threeStars = 15, twoStars = 25;
 /*-------------------------------------
     Functions
 --------------------------------------*/
-
 //Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
   let currentIndex = array.length, temporaryValue, randomIndex;
@@ -164,7 +163,6 @@ function cardListener() {
 /*-------------------------------------
     Events
 --------------------------------------*/
-
 //Click Event - Restart game
 restart.bind('click', function () {
   swal({
