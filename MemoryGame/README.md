@@ -15,6 +15,7 @@ To win this game, all tiles should be matched.
 
 This game utilises the following external libraries within the code.
 
+* [Google Fonts](https://fonts.google.com)
 * [Font Awesome](https://fontawesome.com/)
 * [jQuery](https://jquery.com)
 * [Sweet Alert](https://sweetalert.js.org)
