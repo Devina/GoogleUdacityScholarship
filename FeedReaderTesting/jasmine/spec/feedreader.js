@@ -15,31 +15,31 @@ $(function() {
 
     // Test criteria: Test loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty.
     function checkURLDefined(allFeedsObj) {
-			let keyNames = Object.keys(allFeedsObj);
-
-			it('"allFeeds" variable has the url defined: ' + allFeedsObj.url, function() {
-				expect(keyNames[1]).toEqual("url");
-				expect(allFeedsObj.url.length).not.toBe(0);
-			});
-		}
-
-		for (const allFeedsObj of allFeeds) {
-			checkURLDefined(allFeedsObj);
-		}
+      let keyNames = Object.keys(allFeedsObj);
+	    
+      it('"allFeeds" variable has the url defined: ' + allFeedsObj.url, function() {
+        expect(keyNames[1]).toEqual("url");
+        expect(allFeedsObj.url.length).not.toBe(0);
+      });
+    }
+    
+    for (const allFeedsObj of allFeeds) {
+      checkURLDefined(allFeedsObj);
+    }
 
     // Test criteria: Test loops through each feed in the allFeeds object and ensures it has a name defined and that the name is not empty.
     function checkNameDefined(allFeedsObj) {
-			let keyNames = Object.keys(allFeedsObj);
-
-			it('"allFeeds" variable has the name defined: ' + allFeedsObj.name, function() {
-				expect(keyNames[0]).toContain("name");
-				expect(allFeedsObj.name.length).not.toBe(0);
-			});
-		}
-
-		for (const allFeedsObj of allFeeds) {
-			checkNameDefined(allFeedsObj);
-		}
+      let keyNames = Object.keys(allFeedsObj);
+      
+      it('"allFeeds" variable has the name defined: ' + allFeedsObj.name, function() {
+        expect(keyNames[0]).toContain("name");
+        expect(allFeedsObj.name.length).not.toBe(0);
+      });
+    }
+    
+    for (const allFeedsObj of allFeeds) {
+      checkNameDefined(allFeedsObj);
+    }
   });
 
   // Test suite - The menu
@@ -50,15 +50,15 @@ $(function() {
     });
 
     // Test criteria: Test ensures the menu changes visibility when the menu icon is clicked. Two expectations - 1. The menu display when clicked. 2. The menu hides when clicked again.
-		it('Menu visible when menu icon clicked', function() {
-			$('a.menu-icon-link').trigger("click");
-			expect($('body').hasClass('menu-hidden')).toBe(false);
-		});
-
-		it('Menu hidden when menu icon clicked again', function() {
-			$('a.menu-icon-link').trigger("click");
-			expect($('body').hasClass('menu-hidden')).toBe(true);
-		});
+    it('Menu visible when menu icon clicked', function() {
+      $('a.menu-icon-link').trigger("click");
+      expect($('body').hasClass('menu-hidden')).toBe(false);
+    });
+    
+    it('Menu hidden when menu icon clicked again', function() {
+      $('a.menu-icon-link').trigger("click");
+      expect($('body').hasClass('menu-hidden')).toBe(true);
+    });
   });
 
   // Test suite - Initial Entries
