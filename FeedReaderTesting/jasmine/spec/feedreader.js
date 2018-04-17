@@ -16,13 +16,13 @@ $(function() {
     // Test criteria: Test loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty.
     function checkURLDefined(allFeedsObj) {
       let keyNames = Object.keys(allFeedsObj);
-	    
+
       it('"allFeeds" variable has the url defined: ' + allFeedsObj.url, function() {
         expect(keyNames[1]).toEqual("url");
         expect(allFeedsObj.url.length).not.toBe(0);
       });
     }
-    
+
     for (const allFeedsObj of allFeeds) {
       checkURLDefined(allFeedsObj);
     }
@@ -30,13 +30,13 @@ $(function() {
     // Test criteria: Test loops through each feed in the allFeeds object and ensures it has a name defined and that the name is not empty.
     function checkNameDefined(allFeedsObj) {
       let keyNames = Object.keys(allFeedsObj);
-      
+
       it('"allFeeds" variable has the name defined: ' + allFeedsObj.name, function() {
         expect(keyNames[0]).toContain("name");
         expect(allFeedsObj.name.length).not.toBe(0);
       });
     }
-    
+
     for (const allFeedsObj of allFeeds) {
       checkNameDefined(allFeedsObj);
     }
@@ -54,7 +54,7 @@ $(function() {
       $('a.menu-icon-link').trigger("click");
       expect($('body').hasClass('menu-hidden')).toBe(false);
     });
-    
+
     it('Menu hidden when menu icon clicked again', function() {
       $('a.menu-icon-link').trigger("click");
       expect($('body').hasClass('menu-hidden')).toBe(true);
@@ -76,19 +76,21 @@ $(function() {
   // Test suite - New Feed Selection
   describe('New Feed Selection', function() {
     // Test criteria: Test ensures when a new feed is loaded by the loadFeed function that the content actually changes
-    let feeds = [];
+    let firstFeed, secondFeed;
 
     beforeEach(function(done) {
       loadFeed(0, function() {
-        feeds.push($('.feed').html());  //Feed added to feeds array
-        loadFeed(1, done);
+        firstFeed = $('.feed').html();
+        loadFeed(1, function() {
+          secondFeed = $('.feed').html();
+          done();
+        });
       });
     });
 
     it('Content changes when new feed is loaded', function() {
-      feeds.push($('.feed').html());  //Feed added to feeds array
-      expect(feeds[0]).not.toEqual(feeds[1]);
+      expect(firstFeed).not.toEqual(secondFeed);
     });
 
   });
-}());
+});
