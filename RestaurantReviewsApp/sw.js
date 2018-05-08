@@ -30,7 +30,7 @@ self.addEventListener('install', event => {
 });
 
 /**
- * Cache and return requests (Get resources from the cache if alreadt present)
+ * Cache and return requests (Get resources from the cache if already present)
  */
 self.addEventListener('fetch', event => {
   const requestUrl = new URL(event.request.url);
