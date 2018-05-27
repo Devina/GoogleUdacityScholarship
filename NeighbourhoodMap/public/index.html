@@ -20,7 +20,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React: Neighbourhood Map</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
     <noscript>
@@ -39,4 +39,11 @@
     -->
 
   </body>
+  <script>
+    function gm_authFailure() {
+      document.getElementsByClassName('nav')[0].style.height = "150px";
+      document.getElementsByClassName('title')[0].innerHTML = 'Munch Across The Circular<p class=\'auth-error\'><span id=\'error\'>ERROR:</span> Authentication Failed</p>';
+      console.log('Google Maps Authentication Failure, gm_authFailure() function called');
+    }
+  </script>
 </html>
