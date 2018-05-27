@@ -22,7 +22,7 @@ export default class Map extends Component {
   render() {
     return (
       <div ref='map' className={'map'}>
-        { this.props.error ? (<p className={"map-message"}>Failed to Load Google Maps</p>) : (<p className={"map-message"}>Loading Google Maps...</p>) }
+        { this.props.error ? (<p className={"map-message"}>Failed to Load Google Maps<script>console.log('Failed to Load Google Maps')</script></p>) : (<p className={"map-message"}>Loading Google Maps...</p>) }
       </div>
     )
   }
